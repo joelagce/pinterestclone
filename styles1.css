@@ -1,0 +1,301 @@
+
+.header {
+  display: flex;
+  margin-top: -15px;
+  width: 100%;
+  height: 80px;
+  font-weight: 600;
+  font-size: 1.0rem;
+  
+  justify-content: center;
+  align-items: center;
+  padding: 10px 16px;
+}
+.imagen {
+  width: 58px;
+  height: 58px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imagen:hover {
+  background-color: #F0F0F0;
+}
+.imagen img {
+  width: 34px;
+  height: 34px;
+  border-radius: 100%;
+}
+.inicio {
+  width: 73.31px;
+  height: 48px;
+  background-color: #000000;
+  display: flex;
+  border-radius: 35px;
+  font-family: -apple-system, Ubuntu, Arial, sans-serif;
+  justify-content: center;
+  align-items: center;
+}
+.inicio a {
+  color: white;
+  text-decoration: none;
+}
+/*me falta que se ponga el circulo azul al dar click*/
+.inicio:focus {
+  border: blue solid 3px;
+}
+.hoy {
+  width: 62.66px;
+  height: 48px;
+
+  font-family: -apple-system, Ubuntu, Arial, sans-serif;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hoy a {
+  color: black;
+  text-decoration: none;
+}
+.hoy:hover {
+  background-color: #F0F0F0;
+  border-radius: 35px;
+}
+/**/
+.siguiente {
+  width: 107.67px;
+  height: 48px;
+  margin-right: 5px;
+  background-color: white;
+  /* border-radius: 50%;  */
+  display: flex;
+  font-family: -apple-system, Ubuntu, Arial, sans-serif;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.siguiente a {
+  color: black;
+  text-decoration: none;
+}
+.siguiente:hover {
+  background-color: #F0F0F0;
+  border-radius: 35px;
+}
+
+
+.barra_busqueda{
+  width:60%;
+  height: 48px;
+  background-color: #f0f0f0;
+  border-radius: 55px;
+  
+  grid-template-columns: 15% 85%;
+  padding: 0 0.4rem;
+  position: relative;
+}
+.barra_busqueda input {
+  
+  background: none;
+  outline: none;
+  border: none;
+  line-height: 1;
+  font-weight: 200;
+  font-size: 1.0rem;
+  color: rgb(105, 0, 0);
+}
+.barra_busqueda i {
+  margin-left: 10px;
+
+  line-height: 50px;
+  color: #acacac;
+  transition: 0.5s;
+  font-size: 1.1rem;
+}
+
+.extras {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  justify-content: center;
+  align-items: center;
+  
+}
+.extras:hover {
+  background-color: #F0F0F0;
+}
+.extras svg {
+  width: 30px;
+  height: 28px;
+  
+}
+.extras1 svg {
+  width: 10px;
+  height: 18px;
+  transform: rotate(270deg);
+}
+
+.extras1 {
+  display: flex;
+  width: 28px;
+  height: 28px;
+
+  border-radius: 100%;
+  justify-content: center;
+  align-items: center;
+  
+}
+.extras1:hover {
+  background-color: #F0F0F0;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  justify-content: center;
+}
+
+/* Crear las columnas */
+.column {
+  flex: 25%;
+  max-width: 18%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+  border-radius: 15px;
+ 
+}
+
+
+.select-box {
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+}
+
+.select-box .options-container {
+  background: #2f3640;
+  color: #f5f6fa;
+  max-height: 0;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.4s;
+  border-radius: 8px;
+  overflow: hidden;
+
+  order: 1;
+}
+
+.selected {
+  background: #2f3640;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  color: #f5f6fa;
+  position: relative;
+
+  order: 0;
+}
+
+.selected::after {
+  content: "";
+  background: url("img/arrow-down.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  height: 100%;
+  width: 32px;
+  right: 10px;
+  top: 5px;
+
+  transition: all 0.4s;
+}
+
+.select-box .options-container.active {
+  max-height: 240px;
+  opacity: 1;
+  overflow-y: scroll;
+}
+
+.select-box .options-container.active + .selected::after {
+  transform: rotateX(180deg);
+  top: -6px;
+}
+
+.select-box .options-container::-webkit-scrollbar {
+  width: 8px;
+  background: #0d141f;
+  border-radius: 0 8px 8px 0;
+}
+
+.select-box .options-container::-webkit-scrollbar-thumb {
+  background: #525861;
+  border-radius: 0 8px 8px 0;
+}
+
+.select-box .option,
+.selected {
+  padding: 12px 24px;
+  cursor: pointer;
+}
+
+.select-box .option:hover {
+  background: #414b57;
+}
+
+.select-box label {
+  cursor: pointer;
+}
+
+.select-box .option .radio {
+  display: none;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 300px) {
+ 
+  .column {
+    flex: 20%;
+    max-width: 20%;
+  }
+}
+@media (max-width: 700px){
+ .barra_busqueda{
+   height: 50px;
+   width: 50px;
+   background: none;
+
+ }
+ .barra_busqueda input{
+  visibility: hidden;
+
+ }
+}
+
+
+
+
+
+
+
