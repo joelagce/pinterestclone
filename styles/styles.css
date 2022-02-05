@@ -12,8 +12,13 @@ input {
 }
 
 *,
+
 li {
   list-style: none;
+}
+ul {
+  display: flex;
+  
 }
 
 .animate-before {
@@ -74,14 +79,17 @@ header nav ul li a:hover {
 }
 
 header nav .buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: 24px;
+
+ display: grid;
+ text-align: center;
+ justify-content: center;
+  
+  
+  
 }
 
 header nav .buttons button {
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 700;
   padding: 11px 12px;
   border-radius: 24px;
@@ -103,7 +111,7 @@ header nav .buttons .btn-abrir-popup {
 }
 
 header nav .buttons .signup {
-  margin-left: 16px;
+  margin-top: 10px;
   background: #efefef;
 }
 
@@ -502,4 +510,39 @@ color: rgb(0, 0, 0);
 color: rgb(0, 0, 0);
 text-decoration: none;
 font-size: 10px;
+}
+@media (min-width: 668px) {
+  header nav .buttons {
+
+    display: flex;
+    text-align: center;
+    justify-content: center;
+     
+     
+     
+   }
+   
+   header nav .buttons button {
+     font-size: 16px;
+     font-weight: 700;
+     padding: 11px 12px;
+     border-radius: 24px;
+     border: none;
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-box-align: center;
+         -ms-flex-align: center;
+             align-items: center;
+     -webkit-box-pack: center;
+         -ms-flex-pack: center;
+             justify-content: center;
+   }
+   header nav .buttons .signup {
+  margin-top: 0px;
+  background: #efefef;
+  margin-left:5px ;
+}
+
+  
 }
